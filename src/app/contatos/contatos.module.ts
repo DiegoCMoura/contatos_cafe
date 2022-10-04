@@ -7,12 +7,14 @@ import { ContatosRoutingModule } from './contatos.route';
 import { ContatosAppComponent } from './contatos.app.component';
 import { ListaComponent } from './lista/lista.component';
 import { AdicionarComponent } from './adicionar/adicionar.component';
+import { InputFormComponent } from '../shared/input-form/input-form.component';
 
 @NgModule({
   declarations: [
     ContatosAppComponent,
     ListaComponent,
-    AdicionarComponent
+    AdicionarComponent,
+    InputFormComponent
   ],
   imports: [
     CommonModule,

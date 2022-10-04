@@ -13,43 +13,30 @@
             </div>
 
             <div class="row">
-                <div class="form-group">
-                    <label class="control-label">Nome Completo</label>
-                    <div>
-                        <input class="form-control" name="nomeCompleto" type="text" placeholder="Nome (requerido)" ngModel/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
+                <app-input-form label="Nome" errorMessage="Campo obrigatório">
+                    <input class="form-control" name="nomeCompleto" type="text" placeholder="Nome (requerido)" 
+                            required minlength="5" maxlength="75" #iptNomeCompleto="ngModel" ngModel/>
+                </app-input-form>
             </div>
             <br/>
             <div class="row">
-                <div class="form-group">
-                    <label class="control-label">Apelido</label>
-                    <div>
-                        <input class="form-control" name="apelido" type="text" placeholder="Apelido" ngModel/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
+                <app-input-form label="Apelido">
+                    <input class="form-control" name="apelido" type="text" placeholder="Apelido" ngModel/>
+                </app-input-form>
             </div>
             <br/>
             <div class="row">
-                <div class="form-group">
-                    <label class="control-label">E-mail</label>
-                    <div>
-                        <input class="form-control" name="email" type="text" placeholder="E-mail (requerido)" ngModel/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
+                <app-input-form label="E-mail" errorMessage="Campo obrigatório">
+                    <input class="form-control" name="email" type="text" placeholder="E-mail (requerido)" ngModel
+                            required minlength="5" maxlength="255" #iptEmail="ngModel"/>
+                </app-input-form>
             </div>
             <br/>
             <div class="row">
-                <div class="form-group">
-                    <label class="control-label">Telefone</label>
-                    <div>
-                        <input class="form-control" name="telefone" type="text" placeholder="Telefone (requerido)" ngModel/>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
+                <app-input-form label="Telefone" errorMessage="Campo obrigatório">
+                    <input class="form-control" name="telefone" type="text" placeholder="Telefone (requerido)" ngModel
+                    required #iptTelefone="ngModel"/>
+                </app-input-form>
             </div>
             <br/>
             <button [disabled]="form.invalid">Save</button>

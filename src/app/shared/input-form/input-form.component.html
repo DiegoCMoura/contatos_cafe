@@ -1,0 +1,8 @@
+<div class="form-group" [ngClass]="{'is-invalid': hasError()}">
+    <label class="control-label">{{ label }}</label>
+    <div>
+        <ng-content></ng-content>
+        
+        <span class="help-block" *ngIf="hasError()">{{ errorMessage }}</span>
+    </div>
+</div>
